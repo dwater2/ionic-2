@@ -3,6 +3,9 @@ import {Platform, ionicBootstrap} from 'ionic-angular';
 import {StatusBar} from 'ionic-native';
 import {HomePage} from './pages/home/home';
 import {MenuTestPage} from './pages/menu-test/menu-test';
+import {GeneratedTestPage} from './pages/generated-test/generated-test';
+import {ConnectionService} from './providers/connection-service/connection-service';
+import {AlertPage} from './pages/alert/alert';
 
 
 @Component({
@@ -15,7 +18,9 @@ export class MyApp {
   constructor(platform: Platform) {
     this.pages = [
       {component: HomePage, title: 'Home', icon: 'home'},
-      {component: MenuTestPage, title: 'Home-Test', icon: 'menu'}
+      {component: MenuTestPage, title: 'Home-Test', icon: 'menu'},
+      {component: GeneratedTestPage, title: 'Generated-Test', icon: 'home'},
+      {component: AlertPage, title: 'Alerta', icon: 'home'}
 
     ];
     platform.ready().then(() => {
@@ -34,4 +39,4 @@ export class MyApp {
   }
 }
 
-ionicBootstrap(MyApp);
+ionicBootstrap(MyApp,[ConnectionService]);

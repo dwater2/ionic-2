@@ -1,0 +1,13 @@
+<ion-navbar *navbar>
+  <button  menuToggle>
+    <ion-icon name="menu"> </ion-icon>
+  </button>
+  <ion-title>alert</ion-title>
+</ion-navbar>
+
+<ion-content padding class="alert">
+  <p>Paágina de alerta.</p>
+  <p>Você digitou: {{user}}</p>
+  <button (click)="alert()">Alert</button>
+  <button (click)="alertInputs()">Alert Inputs</button>
+</ion-content>
