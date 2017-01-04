@@ -6,6 +6,7 @@ import {MenuTestPage} from './pages/menu-test/menu-test';
 import {GeneratedTestPage} from './pages/generated-test/generated-test';
 import {ConnectionService} from './providers/connection-service/connection-service';
 import {AlertPage} from './pages/alert/alert';
+import {ButtonTestPage} from './pages/button-test/button-test';
 
 
 @Component({
@@ -20,7 +21,8 @@ export class MyApp {
       {component: HomePage, title: 'Home', icon: 'home'},
       {component: MenuTestPage, title: 'Home-Test', icon: 'menu'},
       {component: GeneratedTestPage, title: 'Generated-Test', icon: 'home'},
-      {component: AlertPage, title: 'Alerta', icon: 'home'}
+      {component: AlertPage, title: 'Alerta', icon: 'home'},
+      {component: ButtonTestPage, title: 'Button', icon: 'home'}
 
     ];
     platform.ready().then(() => {
