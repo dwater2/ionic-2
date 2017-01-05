@@ -1,0 +1,15 @@
+<ion-navbar *navbar>
+  <button  menuToggle>
+    <ion-icon name="menu"> </ion-icon>
+  </button>
+  <ion-title>list-test</ion-title>
+</ion-navbar>
+
+<ion-content class="list-test">
+  <ion-list >
+    <ion-item-group>
+      <ion-item-divider>Família</ion-item-divider>
+      <ion-item *ngFor="let p of personagens" >{{p}}</ion-item>
+    </ion-item-group>
+  </ion-list>
+</ion-content>
