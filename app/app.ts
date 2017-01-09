@@ -14,6 +14,7 @@ import {ListTestPage} from './pages/list-test/list-test';
 import {ModalTestPage} from './pages/modal-test/modal-test';
 import {NavigationTestPage} from './pages/navigation-test/navigation-test';
 import {TabTestPage} from './pages/tab-test/tab-test';
+import {ToastTestPage} from './pages/toast-test/toast-test';
 
 @Component({
   templateUrl: 'build/app.html'
@@ -35,7 +36,8 @@ export class MyApp {
       {component: ListTestPage, title: 'List', icon: 'list'},
       {component: ModalTestPage, title: 'Modal', icon: 'albums'},
       {component: NavigationTestPage, title: 'Navigation', icon: 'arrow-forward'},
-      {component: TabTestPage, title: 'Tab', icon: 'home'}
+      {component: TabTestPage, title: 'Tab', icon: 'home'},
+      {component: ToastTestPage, title: 'Toast', icon: 'bookmark'}
 
     ];
     platform.ready().then(() => {
