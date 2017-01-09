@@ -14,11 +14,13 @@ export class ModalLoginPage {
   }
 
   logar(){
+
     this.view.dismiss(this.user);
 
   }
 
   close(){
+
     this.view.dismiss();
   }
 }

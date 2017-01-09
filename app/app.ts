@@ -12,6 +12,7 @@ import {IconTestPage} from './pages/icon-test/icon-test';
 import {InputTestPage} from './pages/input-test/input-test';
 import {ListTestPage} from './pages/list-test/list-test';
 import {ModalTestPage} from './pages/modal-test/modal-test';
+import {NavigationTestPage} from './pages/navigation-test/navigation-test';
 
 @Component({
   templateUrl: 'build/app.html'
@@ -31,7 +32,8 @@ export class MyApp {
       {component: IconTestPage, title: 'Icon', icon: 'bulb'},
       {component: InputTestPage, title: 'Input', icon: 'create'},
       {component: ListTestPage, title: 'List', icon: 'list'},
-      {component: ModalTestPage, title: 'Modal', icon: 'albums'}
+      {component: ModalTestPage, title: 'Modal', icon: 'albums'},
+      {component: NavigationTestPage, title: 'Navigation', icon: 'arrow-forward'}
 
     ];
     platform.ready().then(() => {

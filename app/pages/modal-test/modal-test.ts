@@ -16,6 +16,7 @@ export class ModalTestPage {
         value: true
       }
     });
+
     modal.onDismiss((param)=>{
       console.log(param);
     });
