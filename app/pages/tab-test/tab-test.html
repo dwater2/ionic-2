@@ -1,0 +1,11 @@
+<ion-navbar *navbar>
+  <button  menuToggle>
+    <ion-icon name="menu"> </ion-icon>
+  </button>
+  <ion-title>tab-test</ion-title>
+</ion-navbar>
+
+<ion-tabs>
+  <ion-tab tabIcon="home" tabTitle="Home" [root]="homePage"></ion-tab>
+  <ion-tab tabIcon="contact" tabTitle="Contatos" tabBadge="5" tabBadgeStyle="danger" [root]="contatosPage"></ion-tab>
+</ion-tabs>
