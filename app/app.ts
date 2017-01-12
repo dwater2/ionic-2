@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {Platform, ionicBootstrap} from 'ionic-angular';
+import {Platform, ionicBootstrap, MenuController} from 'ionic-angular';
 import {StatusBar} from 'ionic-native';
 import {HomePage} from './pages/home/home';
 import {MenuTestPage} from './pages/menu-test/menu-test';
@@ -16,15 +16,18 @@ import {NavigationTestPage} from './pages/navigation-test/navigation-test';
 import {TabTestPage} from './pages/tab-test/tab-test';
 import {ToastTestPage} from './pages/toast-test/toast-test';
 import {ToolbarTestPage} from './pages/toolbar-test/toolbar-test';
+import {CameraTestPage} from './pages/camera-test/camera-test';
+import {NetworkTestPage} from './pages/network-test/network-test';
 
 @Component({
   templateUrl: 'build/app.html'
 })
 export class MyApp {
   pages: Array<{component: any, title: string, icon: string}>;
+  pagesNative: Array<{component: any, title: string, icon: string}>;
   rootPage: any = HomePage;
 
-  constructor(platform: Platform) {
+  constructor(platform: Platform, public menuCtrl: MenuController) {
     this.pages = [
       {component: HomePage, title: 'Home', icon: 'home'},
       {component: MenuTestPage, title: 'Home-Test', icon: 'menu'},
@@ -39,9 +42,12 @@ export class MyApp {
       {component: NavigationTestPage, title: 'Navigation', icon: 'arrow-forward'},
       {component: TabTestPage, title: 'Tab', icon: 'home'},
       {component: ToastTestPage, title: 'Toast', icon: 'bookmark'},
-      {component: ToolbarTestPage, title: 'Toolbar', icon: 'apps'}
+      {component: ToolbarTestPage, title: 'Toolbar', icon: 'apps'},
+      {component: CameraTestPage, title: 'Camera', icon: 'camera'},
+      {component: NetworkTestPage, title: 'Network', icon: 'network'}
 
     ];
+
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
@@ -51,6 +57,7 @@ export class MyApp {
 
   openPage(page: any) : void {
     this.rootPage = page.component;
+    this.menuCtrl.close();
   }
 
   clicou() : void{
