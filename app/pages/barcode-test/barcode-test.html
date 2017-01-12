@@ -1,0 +1,11 @@
+<ion-navbar *navbar>
+  <button  menuToggle>
+    <ion-icon name="menu"> </ion-icon>
+  </button>
+  <ion-title>barcode-test</ion-title>
+</ion-navbar>
+
+<ion-content padding class="barcode-test">
+  <button block (click)="scan()">Scanner</button>
+  <p>{{barcodeData | json }}</p>
+</ion-content>

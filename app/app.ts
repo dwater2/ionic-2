@@ -18,13 +18,14 @@ import {ToastTestPage} from './pages/toast-test/toast-test';
 import {ToolbarTestPage} from './pages/toolbar-test/toolbar-test';
 import {CameraTestPage} from './pages/camera-test/camera-test';
 import {NetworkTestPage} from './pages/network-test/network-test';
+import {NotificationTestPage} from './pages/notification-test/notification-test';
+import {BarcodeTestPage} from './pages/barcode-test/barcode-test';
 
 @Component({
   templateUrl: 'build/app.html'
 })
 export class MyApp {
   pages: Array<{component: any, title: string, icon: string}>;
-  pagesNative: Array<{component: any, title: string, icon: string}>;
   rootPage: any = HomePage;
 
   constructor(platform: Platform, public menuCtrl: MenuController) {
@@ -44,7 +45,9 @@ export class MyApp {
       {component: ToastTestPage, title: 'Toast', icon: 'bookmark'},
       {component: ToolbarTestPage, title: 'Toolbar', icon: 'apps'},
       {component: CameraTestPage, title: 'Camera', icon: 'camera'},
-      {component: NetworkTestPage, title: 'Network', icon: 'network'}
+      {component: NetworkTestPage, title: 'Network', icon: 'git-network'},
+      {component: NotificationTestPage, title: 'Notification', icon: 'notifications'},
+      {component: BarcodeTestPage, title: 'Barcode', icon: 'barcode'}
 
     ];
 
